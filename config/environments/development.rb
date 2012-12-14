@@ -37,6 +37,6 @@ Tenfou::Application.configure do
 
 
 
-  config.amqp_queue = 'AMQP_first_queue'
-  config.amqp_topic = 'AMQP_mail'
+  config.amqp_queue = 'message'
+  config.amqp_topic = 'topic'
 end
