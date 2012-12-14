@@ -58,5 +58,8 @@ module Tenfou
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.amqp_queue = 'message'
+    config.amqp_topic = 'topic'
   end
 end

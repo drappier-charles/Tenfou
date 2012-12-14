@@ -34,9 +34,4 @@ Tenfou::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
-
-
-
-  config.amqp_queue = 'message'
-  config.amqp_topic = 'topic'
 end
