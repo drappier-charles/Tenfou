@@ -18,4 +18,15 @@ class MainController < ApplicationController
       end
     end
   end
+
+  def message
+    AMQP.start(ENV['RABBITMQ_BIGWIG_URL']) do |connection|
+      channel = AMQP::Channel.new(connection)
+      exchange = channel.fanout(Rails.application.config.amqp_topic)
+      exchange.publish(params[:id]) do
+        connection.close{EventMachine.stop}
+      end
+    end
+    render :json => params[:id]
+  end
 end
