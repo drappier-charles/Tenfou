@@ -9,7 +9,7 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-group :development, :test do
+group :production do
   gem 'pg'
 end
 
@@ -28,7 +28,7 @@ end
 
 gem 'jquery-rails'
 #gem 'paperclip'
-#gem 'amqp'
+gem 'amqp'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
